@@ -3,7 +3,7 @@ class Person
   attr_accessor :name, :x, :y ,:arms #accesador y mutador para nombre y cordenadas de la persona
 
   def initialize(name = nil, posx = nil, posy = nil , arms = 0)  #iniciacion nula en caso de que no alla dato
-    @name = name || 'John Doe'
+    @name = name || 'Zlatan Ibrahimovich' 
     @x = posx || Random.rand(10)
     @y = posy || Random.rand(10)
     @arms = 0
