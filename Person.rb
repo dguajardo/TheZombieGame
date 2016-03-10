@@ -38,7 +38,7 @@ class Person
   def zombified?(zombies)                # puts a convertido en zombie en caso del rango sea 1 o menor
     zombies.each do |zombie|
       if zombie.x.between?((@x - 1), (@x + 1)) && zombie.y.between?((@y - 1), (@y + 1))
-        puts "El nuevo zombie #{zombie.name} ha convertido a #{@name} en zombie!!!"
+        puts "The new zombie #{zombie.name} has zombified to #{@name}"
       end
     end
   end
@@ -46,10 +46,8 @@ class Person
   def addArms(armas)
     armas.each do |a|      
       if a.x == @x && a.y == @y 
-        puts "------------------------------"
         puts " The #{@name}"
-        puts  " has picked up #{a.name} "
-        puts "-----------------------------"
+        puts  " has picked up #{a.name} " 
         @arms = 1 
         tipo = armas.delete(a) 
       end
@@ -59,9 +57,7 @@ class Person
     def useArms(zombies)
       zombies.each do |z|
         if  @arms == 1 && z.x.between?((@x - 2), (@x + 2)) && z.y.between?((@y - 2), (@y + 2)) 
-          puts "--------------------------"
           puts "#{@name} has killed to #{z.name}"
-          puts "--------------------------"
           zombies.delete(z)
         end
       end
