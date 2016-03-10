@@ -52,19 +52,19 @@ guns << Gun.new("Baseball bate",3,8)
 # ==> [#<Gun:0x000000011577b8 @name="Shotgun", @x=3, @y=4>, #<Gun:0x00000001146418 @name="Knife", @x=6, @y=6>, #<Gun:0x0000000112e3b8 @name="Baseball bate", @x=3, @y=8>]
 
 
-puts persons.count
+puts "Persons before the game : #{persons.count}"
 # =10
 # ==> nil
 
-puts zombies.count
+puts "Persons before the game : #{zombies.count}"
 # =5
 # ==> nil
 
-puts dogs.count
+puts "Persons before the game : #{dogs.count}"
 # =2
 # ==> nil
 
-puts guns.count
+puts "Persons before the game : #{guns.count}"
 # =3
 # ==> nil
 

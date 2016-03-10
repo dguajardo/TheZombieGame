@@ -47,7 +47,7 @@ class Person
     armas.each do |a|      
       if a.x == @x && a.y == @y 
         puts " The #{@name}"
-        puts  " has picked up #{a.name} " 
+        puts  " has picked up  a #{a.name} " 
         @arms = 1 
         tipo = armas.delete(a) 
       end
