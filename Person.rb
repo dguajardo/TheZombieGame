@@ -15,7 +15,7 @@ class Person
   end
 
   def to_s                                          
-    "#{@name} current position is #{@x}, #{@y}"
+    "#{@name}: Your current position is #{@x}, #{@y}"
   end
 
   def danger?(zombies)            
@@ -24,7 +24,7 @@ class Person
       fail StandardError, 'Zombie is empty' if zombies.empty?
     zombies.each do |zombie|
       if zombie.x.between?((@x - 3), (@x + 3)) && zombie.y.between?((@y - 3), (@y + 3))  #si zombie.x.y  esta entre 3 en el rango de persona
-        puts "Danger, danger #{@name} the zombie #{zombie.name} is closer!!! #{zombie}"
+        puts "Danger, #{@name}, the zombie #{zombie.name} is closer!!! #{zombie}"
       else
         puts "Hey #{@name}, everything is all right around here"
       end
@@ -38,7 +38,7 @@ class Person
   def zombified?(zombies)                # puts a convertido en zombie en caso del rango sea 1 o menor
     zombies.each do |zombie|
       if zombie.x.between?((@x - 1), (@x + 1)) && zombie.y.between?((@y - 1), (@y + 1))
-        puts "The new zombie #{zombie.name} has zombified to #{@name}"
+        puts "The new zombie ,#{zombie.name}, has zombified to ,#{@name}"
       end
     end
   end
